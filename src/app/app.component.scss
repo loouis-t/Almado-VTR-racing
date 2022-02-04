@@ -1,0 +1,71 @@
+$COLOR: white;
+$BACKGROUND: black;
+$THEME: #023373;
+$PADDING: 0 15vw 0 15vw;
+
+header {
+    z-index: 999;
+
+    position: fixed;
+
+    min-width: 100%;
+    height: 4em;
+
+    background: transparentize($color: #1f2122, $amount: .15);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    padding: $PADDING;
+
+
+    h1 {
+        display: flex;
+        align-items: center;
+
+        font-weight: normal;
+        font-size: .8em;
+        letter-spacing: .1em;
+
+        padding: 1em;
+
+        transition: .1s all;
+        
+
+        span {
+            font-size: 2em;
+            margin: 0 .2em 0 .2em;
+        }
+
+        &:hover {
+            color: rgba(255, 255, 255, 0.5);
+        }
+    }
+
+    a {
+        color: $COLOR;
+        text-decoration: none;
+    }
+
+    ul {
+        display: flex;
+
+        li {
+            min-width: 5em;
+            padding: 1em;
+
+            text-align: center;
+            list-style: none;
+            font-size: .8em;
+
+            a {
+                transition: .1s all;
+            }
+
+            &:hover a {
+                color: rgba(255, 255, 255, 0.5);
+            }
+        }
+    }
+}

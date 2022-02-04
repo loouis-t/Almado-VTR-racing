@@ -1,0 +1,141 @@
+$COLOR: white;
+$BACKGROUND: black;
+$THEME: #023373;
+$PADDING: 0 20vw 0 20vw;
+$TEXT_OPACITY: .8;
+$TRANSITION_DURATION: .1s ease-out;
+
+article {
+    max-width: 100%;
+    padding: $PADDING;
+    // padding-top: 4em;
+
+    position: relative;
+
+    animation: onLoad .5s ease-in;
+
+
+    section {
+        padding: 10vh 0 0 0;
+
+        min-height: calc(100vh);
+
+        transition: $TRANSITION_DURATION all;
+
+        &:first-of-type {
+            position: relative;
+            height: calc(100vh - 4em);
+
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+
+            &::before {
+                content: "";
+                position: absolute;
+                background: url('../../assets/pilote.png') no-repeat;
+                background-size: 40vw;
+                background-position-x: 100%;
+                background-position-y: 100%;
+
+                bottom: 0;
+                right: 0;
+
+                width: 100%;
+                height: 100%;
+
+                z-index: -1;
+
+                opacity: .4;
+            }
+
+            &::after {
+                position: absolute;
+                content: "";
+                width: 100%;
+                height: 2em;
+
+                bottom: 0;
+                left: 0;
+
+                background: linear-gradient(0deg, black, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.12), transparent);
+
+                // border: 2px solid white;
+            }
+
+            h2 {
+                padding: 4em 0 0 0;
+                margin: 0;
+                font-size: 3em;
+            }
+
+            h3 {
+                font-weight: normal;
+                margin: 0;
+                padding-left: .25em;
+            }
+        }
+
+        &:nth-of-type(2) {
+            min-height: calc(160vh - 8em);
+        }
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+
+        .sous-section {
+            min-height: 80vh;
+            padding: 4em 0 4em 0;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            transition: $TRANSITION_DURATION all;
+
+            animation: onLoad .5s ease-in-out;
+
+
+            &:nth-of-type(even) {
+                flex-direction: row-reverse;
+            }
+
+            img {
+                max-width: 40vw;
+                max-height: 30vw;
+                // margin-right: 4em;
+
+                transition: .05s all;
+            }
+
+            p {
+                font-size: 1.5em;
+                width: 50%;
+                opacity: $TEXT_OPACITY;
+            }
+
+            &:nth-of-type(2) {
+                p {
+                    font-size: 1.2em;
+                    width: 45%;
+                }
+            }
+
+            #lmp {
+                max-width: 30vw;
+                max-height: 22.5vw;
+            }
+        }
+    }
+}
+
+@keyframes onLoad {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
