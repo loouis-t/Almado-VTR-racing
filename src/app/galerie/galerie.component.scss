@@ -13,6 +13,7 @@ article {
 
     width: 100%;
     min-height: 100%;
+    margin: 0 0 4em 0;
 
     position: relative;
 
@@ -34,16 +35,41 @@ article {
 
 
         .img-container {
+            position: relative;
+
+            
             img {
                 width: calc(20vw - 1em);
                 height: calc(20vw - 1em);
                 object-fit: cover;
-
-                position: relative;
+                
+                transition: $TRANSITION_DURATION;
             }
 
             p {
-                display: block;
+                opacity: 0;
+
+                position: absolute;
+                padding: 0;
+                margin: 0;
+                bottom: 1em;
+                left: 1em;
+
+                font-size: 1.25em;
+
+                transition: $TRANSITION_DURATION;
+
+
+                span {
+                    font-size: .75em;
+                }
+            }
+
+            &:hover img {
+                opacity: .4;
+            }
+            &:hover p {
+                opacity: 1;
             }
         }
     }

@@ -4,11 +4,11 @@ $THEME: #023373;
 $PADDING: 0 20vw 0 20vw;
 $TEXT_OPACITY: .8;
 $TRANSITION_DURATION: .1s ease-in-out;
-$TEXT_GRADIENT: linear-gradient(45deg, hsl(214, 90%, 40%) 30%, hsl(210, 46%, 65%), hsl(214, 97%, 30%) 70%);
+$TEXT_GRADIENT: linear-gradient(45deg, #1f80ff 30%, #99c2ff, #1f80ff 70%);
 
 article{
     width: 100%;
-    min-height: calc(100vh - 4em);
+    min-height: 100vh;
 
     position: relative;
 
@@ -16,21 +16,18 @@ article{
     section {
         &:first-of-type {
             position: relative;
+
             width: 100%;
-            height: 17em;
+            min-height: 25vh;
             margin: 4em 0 0 0;
 
             display: flex;
             justify-content: flex-start;
             align-items: flex-end;
 
-            h2 {
-                padding: 0 0 0 20vw;
-                font-weight: normal;
-                font-size: 4em;
-                color: white;
-            }
+            border-bottom: 1px solid white;
 
+            
             &::before {
                 content: "";
                 position: absolute;
@@ -38,13 +35,20 @@ article{
                 left: 0;
                 width: 100%;
                 height: 100%;
-
+                
                 background: url('../../assets/maxime_casque.png') no-repeat;
                 background-size: 100%;
                 background-position: 0 50%;
                 opacity: .3;
-
+                
                 z-index: -1;
+            }
+
+            h2 {
+                padding: 0 0 0 20%;
+                font-weight: normal;
+                font-size: 4em;
+                color: white;
             }
         }
 
@@ -56,7 +60,11 @@ article{
 
             h3 {
                 font-weight: normal;
-                font-size: 1.75em;
+                font-size: 2em;
+            }
+
+            p {
+                font-size: 1.2em;
             }
         }
     }

@@ -9,7 +9,7 @@ $BORDER_GRADIENT: linear-gradient(70deg, hsl(214, 90%, 40%) 30%, hsl(210, 46%, 6
 
 article {
     width: 100%;
-    height: calc(100vh - 4em);
+    min-height: 100vh;
 
     position: relative;
 

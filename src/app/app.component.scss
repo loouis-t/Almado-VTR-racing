@@ -76,7 +76,7 @@ header {
 footer {
     background: #1f2122;
 
-    margin: 4em 0 0 0;
+    margin: 0em 0 0 0;
     padding: $PADDING;
     width: 100%;
 
@@ -99,15 +99,16 @@ footer {
             font-size: .8em;
             letter-spacing: .1em;
 
-            padding: 1em;
+            padding: 1em 0 1em 0;
 
             transition: .1s all;
+
+            span {
+                font-size: 2em;
+                margin: 0 .2em 0 .2em;
+            }
         }
 
-        span {
-            font-size: 2em;
-            margin: 0 .2em 0 .2em;
-        }
 
     }
 
@@ -178,6 +179,10 @@ footer {
         font-size: .75em;
 
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
+
+        a {
+            text-decoration: underline;
+        }
     }
 }

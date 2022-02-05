@@ -3,8 +3,7 @@
     <div class="grille">
         <div class="img-container" *ngFor="let image of images">
             <img  src="../../assets/{{ image.path }}" alt="">       
-            <p>{{ image.desc }}</p>
-            <p>{{ image.date }}</p>
+            <p>{{ image.desc }} <span><br>{{ image.date }}</span></p>
         </div>
     </div>
 </article>
