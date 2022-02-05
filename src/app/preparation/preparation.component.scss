@@ -1,0 +1,72 @@
+$COLOR: white;
+$BACKGROUND: black;
+$THEME: #023373;
+$PADDING: 0 20vw 0 20vw;
+$TEXT_OPACITY: .8;
+$TRANSITION_DURATION: .1s ease-in-out;
+$TEXT_GRADIENT: linear-gradient(45deg, hsl(214, 90%, 40%) 30%, hsl(210, 46%, 65%), hsl(214, 97%, 30%) 70%);
+$BORDER_GRADIENT: linear-gradient(70deg, hsl(214, 90%, 40%) 30%, hsl(210, 46%, 65%), hsl(214, 97%, 30%) 70%);
+
+article {
+    width: 100%;
+    height: calc(100vh - 4em);
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: $PADDING;
+    padding-top: 4em;
+
+
+    h2 {
+        font-size: 3em;
+        font-weight: normal;
+        margin: 0 0 0 -.075em;
+
+        color: transparent;
+        background-clip: text;
+        background-image: $TEXT_GRADIENT;
+    }
+
+    p {
+        font-size: 1.5em;
+        margin: .5em 0 2em 0;
+    }
+
+    a {
+        padding: .5em 1em .5em 1em;
+        border-radius: 10em;
+        font-size: .9em;
+
+        text-decoration: none;
+
+        width: max-content;
+
+        position: relative;
+        background: black;
+        box-sizing: padding-box;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            width: 100%;
+            height: 100%;
+            background: $BORDER_GRADIENT;
+            padding: 2px;
+            border-radius: inherit;
+
+            z-index: -1;
+        }
+
+        span {
+            background-clip: text;
+            color: transparent;
+            background-image: $TEXT_GRADIENT;
+        }
+    }
+}

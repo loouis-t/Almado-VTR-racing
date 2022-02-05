@@ -1,0 +1,78 @@
+$COLOR: white;
+$BACKGROUND: black;
+$THEME: #023373;
+$PADDING: 0 20vw 0 20vw;
+$TEXT_OPACITY: .8;
+$TRANSITION_DURATION: .1s ease-in-out;
+$TEXT_GRADIENT: linear-gradient(45deg, hsl(214, 90%, 40%) 30%, hsl(210, 46%, 65%), hsl(214, 97%, 30%) 70%);
+
+article {
+    height: calc(100vh - 4em);
+    width: 100%;
+
+    position: relative;
+
+    a {
+        color: hsl(214, 90%, 60%);
+    }
+
+    section {
+
+        &:first-of-type {
+            width: 100%;
+            min-height: 40%;
+            margin-top: 4em;
+            background: url('../../assets/nom_sur_lmp3.png') no-repeat;
+            background-size: 100%;
+            background-position: 0 65%;
+            filter: brightness(.8);
+            border-bottom: 1px solid white;
+        }
+
+        &:last-of-type {
+            padding: $PADDING;
+
+            display: flex;
+            flex-direction: column;
+
+            min-height: 60%;
+            max-height: min-content;
+
+            h1 {
+                font-size: 2em;
+                margin: 1em 0 0 0;
+                color: rgba(255, 255, 255, .8);
+                font-weight: normal;
+            }
+
+            span {
+                width: 50%;
+                margin: 1em 0 2em 0;
+                border: 1px solid rgba(255, 255, 255, .8);
+            }
+
+            .liens {
+                display: flex;
+                justify-content: space-between;
+
+                width: 50%;
+                
+                .types {
+                    display: flex;
+                    flex-direction: column;
+
+                    color: rgba(255, 255, 255, .8);
+                }
+
+                .adresse {
+                    display: flex;
+                    flex-direction: column;
+
+                    a {
+                        padding: 1em 0 1em 0;
+                    }
+                }
+            }
+        }
+    }
+}

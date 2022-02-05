@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'almado-vtr-racing';
+  current_year = new Date().getFullYear();
 }

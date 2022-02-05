@@ -38,7 +38,7 @@ export class Accueil implements OnInit, AfterViewInit {
       else if(currentPosition>2*tailleSection && currentPosition<3*tailleSection)
       {
         this.document.getElementById("s-s-2")!.style.opacity = String(Math.max(1-facteurOpacity, 0.2));
-        this.document.getElementById("s-3")!.style.opacity = String(Math.min(facteurOpacity, 1));
+        this.document.getElementById("s-3")!.style.opacity = String(Math.min(facteurOpacity+.2, 1));
       }
     });
   }
