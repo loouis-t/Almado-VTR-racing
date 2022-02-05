@@ -3,7 +3,7 @@ $BACKGROUND: black;
 $THEME: #023373;
 $PADDING: 0 20vw 0 20vw;
 $TEXT_OPACITY: .8;
-$TRANSITION_DURATION: .1s ease-out;
+$TRANSITION_DURATION: .1s ease-in-out;
 
 article {
     max-width: 100%;
@@ -17,10 +17,10 @@ article {
 
     section {
         padding: 10vh 0 0 0;
-
         min-height: calc(100vh);
 
         transition: $TRANSITION_DURATION all;
+
 
         &:first-of-type {
             position: relative;
@@ -67,6 +67,7 @@ article {
                 padding: 4em 0 0 0;
                 margin: 0;
                 font-size: 3em;
+
             }
 
             h3 {
@@ -113,7 +114,7 @@ article {
             p {
                 font-size: 1.5em;
                 width: 50%;
-                opacity: $TEXT_OPACITY;
+                //opacity: $TEXT_OPACITY;
             }
 
             &:nth-of-type(2) {
@@ -128,6 +129,43 @@ article {
                 max-height: 22.5vw;
             }
         }
+
+        &:nth-of-type(3) {
+            justify-content: center;
+
+            h5 {
+                font-size: 2em;
+                font-weight: bolder;
+
+                margin: 0;
+            }
+
+            .palmares {
+                display: flex;
+                column-gap: 8em;
+                
+                h4 {
+                    display: flex;
+                    flex-direction: column;
+
+                    font-weight: normal;
+                    font-size: 2em;
+    
+                    color: transparent;
+                    background-clip: text;
+                    background-image: linear-gradient(45deg, #134383 30%, #6596C6, $THEME 70%);
+
+                    span {
+                        color: rgba(255, 255, 255, $TEXT_OPACITY);
+                        background: black;
+                        
+                        font-size: .65em;
+                        padding: 0 0 0 .15em;
+                    }
+                }
+            }
+        }
+
     }
 }
 
@@ -136,6 +174,6 @@ article {
         opacity: 0;
     }
     to {
-        opacity: 1;
+        opacity: $TEXT_OPACITY;
     }
 }
