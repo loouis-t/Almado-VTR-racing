@@ -98,5 +98,11 @@ export const images = [
     id: 12, 
     desc: "Victoire Fnac Thronos Challenge", 
     date: "31 juillet 2021"
+  },
+  { 
+    path: "le_mans_virtual.webp",
+    id: 13, 
+    desc: "Le Mans Virtual : P12 avec le Duqueine Team", 
+    date: "15-16 janvier 2022"
   }
 ]
