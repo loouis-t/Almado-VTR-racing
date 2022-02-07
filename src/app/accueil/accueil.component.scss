@@ -172,30 +172,36 @@ article {
                 font-size: 2.5em;
                 font-weight: normal;
 
-                margin: 0;
+                margin: 0 0 1.2em 0;
             }
 
             .palmares {
                 display: flex;
                 column-gap: 10em;
                 
-                h4 {
+                .item {
                     display: flex;
                     flex-direction: column;
+                    margin: 0 0 3em 0;
+                    
+                    h4 {
+                        font-weight: normal;
+                        font-size: 2.25em;
 
-                    font-weight: normal;
-                    font-size: 2.25em;
-    
-                    color: transparent;
-                    background-clip: text;
-                    background-image: $TEXT_GRADIENT;
+                        color: transparent;
+                        background-clip: text;
+                        background-image: $TEXT_GRADIENT;
+                        margin: 0;
+                        padding: 0;
+                    }
 
-                    span {
+                    p {
                         color: white; //rgba(255, 255, 255, $TEXT_OPACITY);
                         background: black;
                         
-                        font-size: .65em;
+                        font-size: 1.475em;
                         padding: 0 0 0 .15em;
+                        margin: 0;
                     }
                 }
             }
