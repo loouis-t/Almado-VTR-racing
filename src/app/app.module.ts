@@ -10,6 +10,7 @@ import { ErrPage } from './ErrPage/ErrPage.component';
 import { AproposComponent } from './apropos/apropos.component';
 import { PreparationComponent } from './preparation/preparation.component';
 import { GalerieComponent } from './galerie/galerie.component';
+import { ActualitesComponent } from './actualites/actualites.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,12 +19,14 @@ import { GalerieComponent } from './galerie/galerie.component';
     ErrPage,
     AproposComponent,
     PreparationComponent,
-    GalerieComponent
+    GalerieComponent,
+    ActualitesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot([
+      { path: 'actu', component: ActualitesComponent },
       { path: 'galerie', component: GalerieComponent },
       { path: 'preparation', component: PreparationComponent },
       { path: 'apropos', component: AproposComponent },
