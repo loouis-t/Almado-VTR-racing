@@ -1,10 +1,21 @@
 <article>
     <section>
         <h2>Actualités</h2>
-        <div class="news">
-            <img src="../../assets/le_mans_virtual.webp" alt="le_mans_virtual.webp">
-            <p>Le Mans Virtual : l'équipe PRiMA-Duqueine se place P12 au classement LMP.</p>
-            <p>15-16 Janvier 2022</p>
+        <div class="news" *ngFor="let image of images.reverse()">
+            <img src="../../assets/{{ image.path }}" alt="{{ image.path }}">
+            <p>{{ image.desc }}</p>
+            <p>{{ image.date }}</p>
+        </div>
+
+        <div class="socials-container">
+            <p>Rejoignez-nous sur les réseaux!</p>
+            <ul class="socials">
+                <li><a href="mailto:contact@almadoVTRracing.fr" target="_blank"><img src="https://img.icons8.com/ios/50/ffffff/apple-mail.png"/></a></li>
+                <li><a href="//www.instagram.com/maxime_delpech_/" target="_blank"><img src="https://img.icons8.com/ios/50/ffffff/instagram-new--v1.png"/></a></li>
+                <li><a href="//fr-fr.facebook.com/maxime.delpech.927" target="_blank"><img src="https://img.icons8.com/ios/50/ffffff/facebook--v1.png"/></a></li>
+                <li><a href="//twitter.com/MaximeDelpech3" target="_blank"><img src="https://img.icons8.com/ios/50/ffffff/twitter--v1.png"/></a></li>
+                <li><a href="//www.youtube.com/channel/UCq4_gnPmqdPtNH65SaXtF8A" target="_blank"><img src="https://img.icons8.com/ios-filled/50/ffffff/youtube-play.png"/></a></li>
+            </ul>
         </div>
     </section>
 </article>

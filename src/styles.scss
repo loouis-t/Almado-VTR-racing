@@ -5,6 +5,9 @@ $BACKGROUND: black;
 $THEME: #023373;
 $PADDING: 0 15vw 0 15vw;
 
+html {
+    background: $BACKGROUND;
+}
 body {
     width: 100vw;
     height: 100vh;
