@@ -1,4 +1,5 @@
 $COLOR: white;
+$COLOR_TRSP: rgba(255, 255, 255, .8);
 $BACKGROUND: black;
 $THEME: #023373;
 $PADDING: 0 20vw 0 20vw;
@@ -55,38 +56,28 @@ article {
                 color: white;
             }
         }
-        /*&:first-of-type {
-            width: 100%;
-            min-height: 30vh;
-            margin-top: 4em;
-            background: url('../../assets/nom_sur_lmp3.png') no-repeat;
-            background-size: 100%;
-            background-position: 0 65%;
-            filter: brightness(.8);
-            border-bottom: 1px solid white;
-        }*/
 
         &:last-of-type {
             padding: $PADDING;
 
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: center; // responsable 'padding-top'
 
-            min-height: 64vh;
+            min-height: 64vh; // calculé
             max-height: min-content;
 
             h3 {
                 font-size: 2em;
                 margin: 0;
-                color: rgba(255, 255, 255, .8);
+                color: $COLOR_TRSP;
                 font-weight: normal;
             }
 
             span {
                 width: 50%;
                 margin: 1em 0 2em 0;
-                border: 1px solid rgba(255, 255, 255, .8);
+                border: 1px solid $COLOR_TRSP;
             }
 
             .liens {
@@ -99,7 +90,7 @@ article {
                     display: flex;
                     flex-direction: column;
 
-                    color: rgba(255, 255, 255, .8);
+                    color: $COLOR_TRSP;
                 }
 
                 .adresse {

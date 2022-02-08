@@ -7,30 +7,34 @@ $PADDING: 0 15vw 0 15vw;
 
 html {
     background: $BACKGROUND;
-}
-body {
-    width: 100vw;
-    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    body {
+        position: relative;
 
-    margin: 0;
-    padding: 0;
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
 
-    position: relative;
+        background: $BACKGROUND;
+        color: $COLOR;
 
-    background: $BACKGROUND;
-    color: $COLOR;
+        * {
+            box-sizing: border-box;
+        }
 
-    * {
-        box-sizing: border-box;
+        overflow-x: hidden;
+        animation: onLoad .5s ease-in;
+
+        a {
+            color: $COLOR;
+        }
+
+        .mobile {
+            display: none;
+        }
+    
     }
-
-    overflow-x: hidden;
-
-    animation: onLoad .5s ease-in;
-}
-
-.mobile {
-    display: none;
 }
 
 @keyframes onLoad {
@@ -52,8 +56,6 @@ body {
     body {
         width: 100vw;
         height: 100vh;
-
-        font-family: system-ui;
 
         position: relative;
 

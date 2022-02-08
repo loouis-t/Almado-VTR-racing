@@ -14,6 +14,23 @@ export class ActualitesComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // ouvrir page dans un nouvel onglet seulement s'il y a vraiment un lien 
+  ifLink(element: string) {
+    if (element != "/actu") {
+      return "_blank";
+    } else {
+      return "_self";
+    }
+  }
+
+  linkOrNot(element: string) {
+    if (element != "/actu") {
+      return "news news-with-link";
+    } else {
+      return "news";
+    }
+  }
+
 }
 
 export interface image {
@@ -30,7 +47,7 @@ export const images = [
     id: 11, 
     desc: "Essais LMP3 (jour 2)", 
     date: "21 novembre 2020",
-    link: "/actu"
+    link: "//www.youtube.com/watch?v=Qj-lne9wpUU"
   },
   { 
     path: "victoire_fnac.jpeg",
@@ -44,7 +61,7 @@ export const images = [
     id: 13, 
     desc: "Le Mans Virtual : 3ème relais", 
     date: "15-16 janvier 2022",
-    link: "/actu"
+    link: "//youtu.be/P5kqD2Vha-I?t=32055"
   },
   { 
     path: "le_mans_virtual.webp",
