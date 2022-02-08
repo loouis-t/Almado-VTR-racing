@@ -27,11 +27,11 @@ article {
     
     .grille {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
         flex-wrap: wrap;
         
-        row-gap: 1.5em;
-        column-gap: 1em;
+        row-gap: 1.25em;
+        column-gap: 1.5em;
 
 
         .img-container {
@@ -39,8 +39,8 @@ article {
 
             
             img {
-                width: calc(20vw - 1em);
-                height: calc(20vw - 1em);
+                width: calc((60vw - 3em) / 3);
+                height: calc((60vw - 3em) / 3);
                 object-fit: cover;
                 
                 transition: $TRANSITION_DURATION;

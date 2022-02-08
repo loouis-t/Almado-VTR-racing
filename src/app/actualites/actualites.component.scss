@@ -27,6 +27,8 @@ article {
 
         .news {
             position: relative;
+            color: $COLOR;
+            text-decoration: none;
 
             &::after {
                 content: "";

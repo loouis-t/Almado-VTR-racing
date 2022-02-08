@@ -100,7 +100,7 @@ export const images = [
     date: "31 juillet 2021"
   },
   { 
-    path: "maxime_lemans.jpg",
+    path: "maxime_lemans.jpeg",
     id: 13, 
     desc: "Le Mans Virtual : 3ème relais", 
     date: "15-16 janvier 2022"
@@ -109,6 +109,12 @@ export const images = [
     path: "le_mans_virtual.webp",
     id: 14, 
     desc: "Le Mans Virtual : P12 avec le Duqueine Team", 
+    date: "15-16 janvier 2022"
+  },
+  { 
+    path: "Maxime-LMV-2022.jpeg",
+    id: 15, 
+    desc: "Le Mans Virtual : équipe PRiMA-Duqueine", 
     date: "15-16 janvier 2022"
   }
 ]

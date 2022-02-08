@@ -1,11 +1,11 @@
 <article>
     <section>
         <h2>Actualités</h2>
-        <div class="news" *ngFor="let image of images.reverse()">
+        <a href="{{ image.link }}" class="news" *ngFor="let image of images.reverse()">
             <img src="../../assets/{{ image.path }}" alt="{{ image.path }}">
             <p>{{ image.desc }}</p>
             <p>{{ image.date }}</p>
-        </div>
+        </a>
 
         <div class="socials-container">
             <p>Rejoignez-nous sur les réseaux!</p>
