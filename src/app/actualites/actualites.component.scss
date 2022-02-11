@@ -19,6 +19,7 @@ article {
         justify-content: space-between;
         row-gap: 1em;
 
+
         h2 {
             font-weight: normal;
             font-size: 2em;
@@ -70,23 +71,25 @@ article {
             }
 
             &:first-of-type, &:nth-of-type(4n) {
+                width: 100%;
                 img {
                     position: relative;
-    
+                    
                     width: 100%;
                     height: calc(9*60vw/21);
-    
+                    
                     object-fit: cover;
                     object-position: 0 50%;
-    
+                    
                     transition: $TRANSITION_DURATION;
                 }
             }
+
             img {
                 position: relative;
-
-                width: calc(30vw - .5em);
-                height: calc(30vw - .5em);
+                
+                width: calc(30vw - .75em);
+                height: calc(9*60vw/21);
 
                 object-fit: cover;
                 object-position: 0 50%;
