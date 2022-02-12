@@ -11,6 +11,7 @@ import { AproposComponent } from './apropos/apropos.component';
 import { PreparationComponent } from './preparation/preparation.component';
 import { GalerieComponent } from './galerie/galerie.component';
 import { ActualitesComponent } from './actualites/actualites.component';
+import { MobileComponent } from './mobile/mobile.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,12 +21,14 @@ import { ActualitesComponent } from './actualites/actualites.component';
     AproposComponent,
     PreparationComponent,
     GalerieComponent,
-    ActualitesComponent
+    ActualitesComponent,
+    MobileComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot([
+      { path: 'mobile', component: MobileComponent },
       { path: 'actu', component: ActualitesComponent },
       { path: 'galerie', component: GalerieComponent },
       { path: 'preparation', component: PreparationComponent },

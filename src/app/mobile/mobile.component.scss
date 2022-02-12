@@ -1,0 +1,186 @@
+$COLOR: white;
+$PADDING: 0 20vw 0 20vw;
+$TEXT_OPACITY: .8;
+$TRANSITION_DURATION: .1s ease-in-out;
+$TEXT_GRADIENT: linear-gradient(45deg, #1f80ff 30%, #99c2ff, #1f80ff 70%);
+$BORDER_GRADIENT: linear-gradient(45deg, #1f80ff 30%, #99c2ff, #1f80ff 70%);
+$THICKNESS: 3px;
+
+
+article {
+    min-height: 100%;
+
+
+    header {
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        align-items: space-between;
+        
+        width: 100%;
+        height: fit-content;
+        margin: 0;
+        padding: 0 2em 0 2em;
+
+        background: transparentize($color: #1f2122, $amount: .15);
+        list-style: none;
+
+
+
+        
+        #navBar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+            height: 5em;
+            
+
+            #burger {
+                position: relative;
+
+                display: flex;
+                flex-direction: column;
+
+                width: 2em;
+                height: 2em;
+
+
+                span {
+                    height: $THICKNESS;
+                    margin: $THICKNESS 0;
+                    border-radius: calc($THICKNESS/2);
+                    background: $COLOR;
+                    transition: .2s ease-in-out;
+
+                    
+                    &:nth-of-type(1) {
+                        width: 50%;
+                    }
+                    
+                    &:nth-of-type(2) {
+                        width: 100%;
+                    }
+                    
+                    &:nth-of-type(3) {
+                        width: 75%;
+                    }
+                }
+
+                input {
+                    display: none;
+        
+                    &:checked {
+                        & ~ span {
+                            &:nth-of-type(1) {
+                                transform-origin: bottom;
+                                transform: rotateZ(45deg) translate($THICKNESS, 1.5px);
+                            }
+            
+                            &:nth-of-type(2) {
+                                transform-origin: center;
+                                transform: rotateZ(-45deg);
+                            }
+            
+                            &:nth-of-type(3) {
+                                width: 50%;
+                                transform-origin: top;
+                                transform: translate(calc(1em - 1.5px), -3px) rotateZ(45deg);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+        a {
+            text-decoration: none;
+        }
+
+        h1 {
+            display: flex;
+            align-items: center;
+    
+            font-weight: normal;
+            font-size: .8em;
+            letter-spacing: .1em;
+    
+            padding: 1em;
+    
+            transition: .1s all;
+            
+    
+            span {
+                font-size: 2em;
+                margin: 0 .2em 0 .2em;
+            }
+    
+            &:hover {
+                color: rgba(255, 255, 255, 0.5);
+            }
+        }
+
+
+        #menu {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            row-gap: 2em;
+
+            width: 0;
+            height: 0;
+            padding: 0;
+            margin: 0;
+            
+            font-size: 1.2em;
+            opacity: 0;
+            
+            z-index: 1;
+
+            list-style: none;
+
+            transition: height .5s ease-in-out, width .3s ease-in-out, opacity .5s ease-in-out;
+
+            overflow: hidden;
+            
+
+            .lien {
+                width: 100%;
+                padding: 1em 2.5em;
+        
+                border-bottom: 1px solid white;
+            }
+        
+            .copyrights {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+
+                height: 100%;
+                padding-bottom: 4em;
+
+                font-size: .75em;        
+                color: rgba(255, 255, 255, $TEXT_OPACITY);
+            
+                z-index: 0;
+            }
+        }
+    }
+}
+
+
+
+// ajouté quand appel du menu
+.menuOuvert {
+    // display: flex !important;
+    height: calc(100vh - 4.5em) !important;
+    width: 100% !important;
+    opacity: 1 !important;
+}
+
+
+
+
