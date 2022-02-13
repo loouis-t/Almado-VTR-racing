@@ -8,7 +8,6 @@ import { ContactComponent } from './contact/contact.component';
 import { Accueil } from './accueil/accueil.component';
 import { ErrPage } from './ErrPage/ErrPage.component';
 import { AproposComponent } from './apropos/apropos.component';
-import { PreparationComponent } from './preparation/preparation.component';
 import { GalerieComponent } from './galerie/galerie.component';
 import { ActualitesComponent } from './actualites/actualites.component';
 import { MobileComponent } from './mobile/mobile.component';
@@ -19,7 +18,6 @@ import { MobileComponent } from './mobile/mobile.component';
     Accueil,
     ErrPage,
     AproposComponent,
-    PreparationComponent,
     GalerieComponent,
     ActualitesComponent,
     MobileComponent
@@ -31,7 +29,6 @@ import { MobileComponent } from './mobile/mobile.component';
       { path: 'mobile', component: MobileComponent },
       { path: 'actu', component: ActualitesComponent },
       { path: 'galerie', component: GalerieComponent },
-      { path: 'preparation', component: PreparationComponent },
       { path: 'apropos', component: AproposComponent },
       { path: 'contact', component: ContactComponent },
       { path: '', component: Accueil },
@@ -46,7 +43,6 @@ import { MobileComponent } from './mobile/mobile.component';
     Accueil,
     ErrPage,
     AproposComponent,
-    PreparationComponent,
     GalerieComponent
   ]
 })
