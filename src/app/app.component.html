@@ -6,7 +6,8 @@
 	}
 </style>
 
-<header>
+<!-- si version desktop -->
+<header class="desktop">
 	<a href="/"><h1>
 		almado<span>VTR</span>racing
 	</h1></a>
@@ -18,16 +19,46 @@
 	</ul>
 </header>
 
-<router-outlet></router-outlet>
+<!-- si version mobile -->
+<header id="header" class="mobile">
+	<div id="navBar">
+		<label for="check" id="burger" (click)="displayMenu()">
+			<input type="checkbox" id="check">
+			<span></span>
+			<span></span>
+			<span></span>
+		</label>
+	
 
-<footer>
+		<a href="/" id="titre"><h1>
+			almado<span>VTR</span>racing
+		</h1></a>
+	</div>
+
+	<ul id="menu">
+		<a href="/apropos" class="lien"><li>A propos</li></a>
+		<a href="/actu" class="lien"><li>Actualités</li></a>
+		<a href="/galerie" class="lien"><li>Galerie</li></a>
+		<a href="/contact" class="lien"><li>Contact</li></a>
+		<a class="copyrights"><li>Copyrights © 2021-{{ current_year }} Almado VTR racing</li></a>
+	</ul>
+</header>
+
+<!-- contenu page -->
+<router-outlet></router-outlet>
+<!-- contenu page -->
+
+
+
+<!-- si version pc -->
+<footer class="desktop">
 	<div class="upperSide">
 		<a href="/" class="logo"><h1>
 		almado<span>VTR</span>racing
 		</h1></a>
 		<ul>
 			<li><a href="/apropos">A propos</a></li>
-			<li><a href="/preparation">Préparation</a></li>
+			<li><a href="/actu">Actualités</a></li>
 			<li><a href="/galerie">Galerie</a></li>
 			<li><a href="/contact">Contact</a></li>
 		</ul>
@@ -42,6 +73,34 @@
 	<hr>
 	<div class="downSide">
 		<p>Copyright © 2021-{{ current_year }} Almado VTR racing</p>
+		<p>Dév. : <a href="//github.com/loouis-t/" target="_blank">Louis Travaux</a></p>
+	</div>
+</footer>
+
+
+<!-- si version mobile -->
+<footer class="mobile">
+	<div class="upperSide">
+		<a href="/" class="logo"><h1>
+		almado<span>VTR</span>racing
+		</h1></a>
+		<ul class="socials">
+			<li><a href="mailto:contact@almadoVTRracing.fr" target="_blank"><img src="https://img.icons8.com/ios/50/ffffff/apple-mail.png"/></a></li>
+			<li><a href="//www.instagram.com/maxime_delpech_/" target="_blank"><img src="https://img.icons8.com/ios/50/ffffff/instagram-new--v1.png"/></a></li>
+			<li><a href="//fr-fr.facebook.com/maxime.delpech.927" target="_blank"><img src="https://img.icons8.com/ios/50/ffffff/facebook--v1.png"/></a></li>
+			<li><a href="//twitter.com/MaximeDelpech3" target="_blank"><img src="https://img.icons8.com/ios/50/ffffff/twitter--v1.png"/></a></li>
+			<li><a href="//www.youtube.com/channel/UCq4_gnPmqdPtNH65SaXtF8A" target="_blank"><img src="https://img.icons8.com/ios-filled/50/ffffff/youtube-play.png"/></a></li>
+		</ul>
+	</div>
+	<ul>
+		<li><a href="/apropos">A propos</a></li>
+		<li><a href="/actu">Actualités</a></li>
+		<li><a href="/galerie">Galerie</a></li>
+		<li><a href="/contact">Contact</a></li>
+	</ul>
+	<hr>
+	<div class="downSide">
+		<p>© 2021-{{ current_year }} Almado VTR racing</p>
 		<p>Dév. : <a href="//github.com/loouis-t/" target="_blank">Louis Travaux</a></p>
 	</div>
 </footer>

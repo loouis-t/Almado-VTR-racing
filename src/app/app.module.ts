@@ -10,7 +10,8 @@ import { ErrPage } from './ErrPage/ErrPage.component';
 import { AproposComponent } from './apropos/apropos.component';
 import { GalerieComponent } from './galerie/galerie.component';
 import { ActualitesComponent } from './actualites/actualites.component';
-import { MobileComponent } from './mobile/mobile.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,14 +20,12 @@ import { MobileComponent } from './mobile/mobile.component';
     ErrPage,
     AproposComponent,
     GalerieComponent,
-    ActualitesComponent,
-    MobileComponent
+    ActualitesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot([
-      { path: 'mobile', component: MobileComponent },
       { path: 'actu', component: ActualitesComponent },
       { path: 'galerie', component: GalerieComponent },
       { path: 'apropos', component: AproposComponent },
