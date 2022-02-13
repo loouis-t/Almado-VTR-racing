@@ -3,102 +3,213 @@ $COLOR_TRSP: rgba(255, 255, 255, .8);
 $BACKGROUND: black;
 $THEME: #023373;
 $PADDING: 0 20vw 0 20vw;
+$PADDING_MOBILE: 0 10vw 0 10vw;
 $TEXT_OPACITY: .8;
 $TRANSITION_DURATION: .1s ease-in-out;
 $TEXT_GRADIENT: linear-gradient(45deg, #1f80ff 30%, #99c2ff, #1f80ff 70%);
 
-article {
-    min-height: calc(100% - 4em);
-    width: 100%;
 
-    position: relative;
+@media screen and (min-width: 768px) {
+    article {
+        position: relative;
 
-    a {
-        color: hsl(214, 90%, 60%);
-    }
+        min-height: calc(100% - 4em);
+        width: 100%;
 
-    section {
-
-        &:first-of-type {
-            position: relative;
-
-            width: 100%;
-            min-height: 30vh;
-            margin: 4em 0 0 0;
-
-            display: flex;
-            justify-content: flex-start;
-            align-items: flex-end;
-
-            border-bottom: 1px solid white;
-
-            
-            &::before {
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                
-                background: url('../../assets/nom_sur_lmp3.png') no-repeat;
-                background-size: 100%;
-                background-position: 0 65%;
-                opacity: .3;
-                
-                z-index: 0;
-            }
-
-            h2 {
-                padding: 0 0 0 20%;
-                font-weight: normal;
-                font-size: 4em;
-                color: white;
-            }
+        a {
+            color: hsl(214, 90%, 60%);
         }
 
-        &:last-of-type {
-            padding: $PADDING;
+        section {
+            position: relative;
 
-            display: flex;
-            flex-direction: column;
-            justify-content: center; // responsable 'padding-top'
+            &:first-of-type {
 
-            min-height: 64vh; // calculé
-            max-height: min-content;
+                width: 100%;
+                min-height: 30vh;
+                margin: 4em 0 0 0;
 
-            h3 {
-                font-size: 2em;
-                margin: 0;
-                color: $COLOR_TRSP;
-                font-weight: normal;
-            }
-
-            span {
-                width: 50%;
-                margin: 1em 0 2em 0;
-                border: 1px solid $COLOR_TRSP;
-            }
-
-            .liens {
                 display: flex;
-                justify-content: space-between;
+                justify-content: flex-start;
+                align-items: flex-end;
 
-                width: 50%;
+                border-bottom: 1px solid white;
+
                 
-                .types {
-                    display: flex;
-                    flex-direction: column;
-
-                    color: $COLOR_TRSP;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    
+                    background: url('../../assets/nom_sur_lmp3.png') no-repeat;
+                    background-size: 100%;
+                    background-position: 0 65%;
+                    opacity: .3;
+                    
+                    z-index: 0;
                 }
 
-                .adresse {
-                    display: flex;
-                    flex-direction: column;
+                h2 {
+                    padding: 0 0 0 20%;
+                    font-weight: normal;
+                    font-size: 4em;
+                    color: white;
+                    z-index: 1;
+                }
+            }
 
-                    a {
-                        padding: 1em 0 1em 0;
+            &:last-of-type {
+                padding: $PADDING;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center; // responsable 'padding-top'
+
+                min-height: 64vh; // calculé
+                max-height: min-content;
+
+                h3 {
+                    font-size: 2em;
+                    margin: 0;
+                    color: $COLOR_TRSP;
+                    font-weight: normal;
+                }
+
+                span {
+                    width: 50vw;
+                    margin: 1em 0 2em 0;
+                    border: 1px solid $COLOR_TRSP;
+                }
+
+                .liens {
+                    display: flex;
+                    justify-content: space-between;
+
+                    max-width: 50vw;
+                    
+                    .types {
+                        display: flex;
+                        flex-direction: column;
+
+                        color: $COLOR_TRSP;
+                    }
+
+                    .adresse {
+                        display: flex;
+                        flex-direction: column;
+
+                        a {
+                            padding: 1em 0 1em 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    article {
+        position: relative;
+
+        min-height: calc(100% - 5em);
+        width: 100%;
+
+        a {
+            color: hsl(214, 90%, 60%);
+        }
+
+        section {
+
+            &:first-of-type {
+                position: relative;
+
+                width: 100%;
+                min-height: 20vh;
+                margin: 5em 0 0 0;
+
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-end;
+
+                border-bottom: 1px solid white;
+
+                
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    
+                    background: url('../../assets/nom_sur_lmp3.png') no-repeat;
+                    background-size: 100%;
+                    background-position: 0 65%;
+                    opacity: .3;
+                    
+                    z-index: 0;
+                }
+
+                h2 {
+                    padding: 0 0 0 5%;
+                    font-weight: normal;
+                    font-size: 2em;
+                    color: white;
+                    z-index: 1;
+                }
+            }
+
+            &:last-of-type {
+                padding: $PADDING_MOBILE;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center; // responsable 'padding-top'
+
+                min-height: 64vh; // calculé
+                max-height: min-content;
+
+                h3 {
+                    font-size: 1.5em;
+                    margin: 0;
+                    color: $COLOR_TRSP;
+                    font-weight: normal;
+                }
+
+                span {
+                    width: 50%;
+                    margin: 1em 0 2em 0;
+                    border: 1px solid $COLOR_TRSP;
+                }
+
+                .liens {
+                    display: flex;
+                    justify-content: space-between;
+
+                    width: 100%;
+
+                    font-size: .75em;
+                    
+                    
+                    .types {
+                        display: flex;
+                        flex-direction: column;
+
+                        color: $COLOR_TRSP;
+                    }
+
+                    .adresse {
+                        display: flex;
+                        flex-direction: column;
+
+                        a {
+                            padding: 1em 0 1em 0;
+                        }
                     }
                 }
             }
