@@ -367,7 +367,8 @@ $TEXT_OPACITY: .8;
                 align-items: center;
 
                 width: calc(100vw - 4em);
-                padding: 4vh 0 0 0;
+                height: 100%;
+                padding: 4vh 0 2em 0;
 
                 overflow-x: hidden;
 
@@ -381,7 +382,7 @@ $TEXT_OPACITY: .8;
 
     // ajouté quand appel du menu
     .menuOuvert {
-        height: 100% !important;
+        height: calc(100% - 5em) !important;
         width: 100% !important;
         border-radius: 0 !important;
         opacity: 1 !important;
