@@ -1,7 +1,7 @@
 <article>
     <h2>Galerie</h2>
     <div class="grille">
-        <div class="img-container" *ngFor="let image of images">
+        <div class="img-container" *ngFor="let image of images.reverse()">
             <img  src="../../assets/{{ image.path }}" alt="{{ image.path }}">       
             <p>{{ image.desc }} <span><br>{{ image.date }}</span></p>
         </div>

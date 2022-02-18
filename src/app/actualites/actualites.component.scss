@@ -34,6 +34,7 @@ $BORDER_GRADIENT: linear-gradient(45deg, #1f80ff 30%, #99c2ff, #1f80ff 70%);
                 position: relative;
                 color: $COLOR;
                 text-decoration: none;
+                overflow: hidden;
                 cursor: default;
 
                 &::after {
@@ -83,8 +84,6 @@ $BORDER_GRADIENT: linear-gradient(45deg, #1f80ff 30%, #99c2ff, #1f80ff 70%);
                         
                         object-fit: cover;
                         object-position: 0 50%;
-                        
-                        transition: $TRANSITION_DURATION;
                     }
                 }
 
@@ -97,14 +96,16 @@ $BORDER_GRADIENT: linear-gradient(45deg, #1f80ff 30%, #99c2ff, #1f80ff 70%);
                     object-fit: cover;
                     object-position: 0 50%;
 
-                    transition: $TRANSITION_DURATION;
+                    transition: all $TRANSITION_DURATION;
                 }
             }
 
             .news-with-link:hover {
                 cursor: pointer;
 
+                
                 img {
+                    scale: 1.025;     // nécessite 'overflow: hidden' sur conteneur
                     opacity: .8;
                 }
             }
