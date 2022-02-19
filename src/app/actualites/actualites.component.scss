@@ -1,19 +1,11 @@
-$COLOR: white;
-$COLOR_TRSP: rgba(255, 255, 255, .8);
-$PADDING: 0 20vw 0 20vw;
-$PADDING_MOBILE: 0 10vw 0 10vw;
-$TEXT_OPACITY: .8;
-$TRANSITION_DURATION: .2s ease-in-out;
-$TEXT_GRADIENT: linear-gradient(45deg, #1f80ff 30%, #99c2ff, #1f80ff 70%);
-$BORDER_GRADIENT: linear-gradient(45deg, #1f80ff 30%, #99c2ff, #1f80ff 70%);
-
+@use '../../styles.scss' as c;
 
 @media screen and (min-width: 768px) {
     article {
         width: 100%;
         min-height: 100vh;
 
-        padding: $PADDING;
+        padding: c.$PADDING;
 
 
         section {
@@ -32,7 +24,7 @@ $BORDER_GRADIENT: linear-gradient(45deg, #1f80ff 30%, #99c2ff, #1f80ff 70%);
 
             .news {
                 position: relative;
-                color: $COLOR;
+                color: c.$COLOR;
                 text-decoration: none;
                 overflow: hidden;
                 cursor: default;
@@ -96,7 +88,7 @@ $BORDER_GRADIENT: linear-gradient(45deg, #1f80ff 30%, #99c2ff, #1f80ff 70%);
                     object-fit: cover;
                     object-position: 0 50%;
 
-                    transition: all $TRANSITION_DURATION;
+                    transition: all c.$TRANSITION_DURATION;
                 }
             }
 
@@ -119,7 +111,7 @@ $BORDER_GRADIENT: linear-gradient(45deg, #1f80ff 30%, #99c2ff, #1f80ff 70%);
                 align-items: center;
 
                 a {
-                    color: $COLOR_TRSP;
+                    color: c.$COLOR_TRSP;
                 }
 
 
@@ -156,7 +148,7 @@ $BORDER_GRADIENT: linear-gradient(45deg, #1f80ff 30%, #99c2ff, #1f80ff 70%);
         width: 100%;
         min-height: 100vh;
 
-        padding: $PADDING_MOBILE;
+        padding: c.$PADDING_MOBILE;
 
 
         section {
@@ -175,7 +167,7 @@ $BORDER_GRADIENT: linear-gradient(45deg, #1f80ff 30%, #99c2ff, #1f80ff 70%);
             .news {
                 position: relative;
                 width: 100%;
-                color: $COLOR;
+                color: c.$COLOR;
                 text-decoration: none;
 
                 &::after {
@@ -224,7 +216,7 @@ $BORDER_GRADIENT: linear-gradient(45deg, #1f80ff 30%, #99c2ff, #1f80ff 70%);
                     object-fit: cover;
                     object-position: 0 25%;
                     
-                    transition: $TRANSITION_DURATION;
+                    transition: c.$TRANSITION_DURATION;
                 }
             }
             
@@ -237,7 +229,7 @@ $BORDER_GRADIENT: linear-gradient(45deg, #1f80ff 30%, #99c2ff, #1f80ff 70%);
                 align-items: flex-start;
 
                 a {
-                    color: $COLOR_TRSP;
+                    color: c.$COLOR_TRSP;
                 }
 
 

@@ -1,21 +1,10 @@
-$COLOR: white;
-$PADDING: 0 15vw 0 15vw;
-$PADDING_MOBILE: 0 10vw 0 10vw;
-$TEXT_GRADIENT: linear-gradient(45deg, hsl(214, 90%, 40%) 30%, hsl(210, 46%, 65%), hsl(214, 97%, 30%) 70%);
-$HEADER_GREY: transparentize($color: #1f2122, $amount: .15);
-$THICKNESS: 3px;
-$HEADER_GREY: transparentize($color: #1f2122, $amount: .15);
-$TEXT_OPACITY: .8;
-
-
+@use '../styles.scss' as c;
 
 @media screen and (min-width: 768px) {
 
     .mobile {
         display: none;
     }
-
-
 
     .desktop:not(footer) {
         z-index: 999;
@@ -33,7 +22,7 @@ $TEXT_OPACITY: .8;
         justify-content: space-between;
         align-items: center;
         
-        padding: $PADDING;
+        padding: c.$HEADER_PADDING;
     
     
         h1 {
@@ -60,7 +49,7 @@ $TEXT_OPACITY: .8;
         }
     
         a {
-            color: $COLOR;
+            color: c.$COLOR;
             text-decoration: none;
         }
     
@@ -90,7 +79,7 @@ $TEXT_OPACITY: .8;
         background: #1f2122;
     
         margin: 0em 0 0 0;
-        padding: $PADDING;
+        padding: c.$HEADER_PADDING;
         width: 100%;
     
         position: relative;
@@ -100,7 +89,7 @@ $TEXT_OPACITY: .8;
     
     
         a {
-            color: $COLOR;
+            color: c.$COLOR;
             
             text-decoration: none;
             
@@ -233,8 +222,8 @@ $TEXT_OPACITY: .8;
 
             transition: background-color .25s ease-in-out;
 
-            background-color: $HEADER_GREY;
-            z-index: 1;
+            background-color: c.$HEADER_GREY;
+            z-index: 2;
             
             #burger {
                 position: relative;
@@ -247,10 +236,10 @@ $TEXT_OPACITY: .8;
 
 
                 span {
-                    height: $THICKNESS;
-                    margin: $THICKNESS 0;
-                    border-radius: calc($THICKNESS/2);
-                    background: $COLOR;
+                    height: c.$THICKNESS;
+                    margin: c.$THICKNESS 0;
+                    border-radius: calc(c.$THICKNESS/2);
+                    background: c.$COLOR;
                     transition: .2s ease-in-out;
 
                     
@@ -274,7 +263,7 @@ $TEXT_OPACITY: .8;
                         & ~ span {
                             &:nth-of-type(1) {
                                 transform-origin: bottom;
-                                transform: rotateZ(45deg) translate($THICKNESS, 1.5px);
+                                transform: rotateZ(45deg) translate(c.$THICKNESS, 1.5px);
                             }
             
                             &:nth-of-type(2) {
@@ -357,7 +346,7 @@ $TEXT_OPACITY: .8;
 
                 // font-size: 1.2em;
         
-                border-bottom: 1px solid rgba(255, 255, 255, $TEXT_OPACITY);
+                border-bottom: 1px solid rgba(255, 255, 255, c.$TEXT_OPACITY);
             }
         
             .copyrights {
@@ -373,7 +362,7 @@ $TEXT_OPACITY: .8;
                 overflow-x: hidden;
 
                 font-size: .75em;
-                color: rgba(255, 255, 255, $TEXT_OPACITY);
+                color: rgba(255, 255, 255, c.$TEXT_OPACITY);
             
                 z-index: 0;
             }
@@ -399,9 +388,9 @@ $TEXT_OPACITY: .8;
     .mobile:not(header) {
         display: flex;
         flex-direction: column;
-        padding: $PADDING_MOBILE;
+        padding: c.$PADDING_MOBILE;
 
-        background: $HEADER_GREY;
+        background: c.$HEADER_GREY;
 
         font-size: .75em;
 

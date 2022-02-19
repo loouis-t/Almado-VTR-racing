@@ -3,7 +3,17 @@
 $COLOR: white;
 $BACKGROUND: black;
 $THEME: #023373;
-$PADDING: 0 15vw 0 15vw;
+$HEADER_PADDING: 0 15vw 0 15vw;
+$PADDING: 0 20vw 0 20vw;
+$PADDING_MOBILE: 0 10vw 0 10vw;
+$HEADER_GREY: transparentize($color: #1f2122, $amount: .15);
+$TEXT_GRADIENT: linear-gradient(45deg, hsl(214, 90%, 40%) 30%, hsl(210, 46%, 65%), hsl(214, 97%, 30%) 70%);
+$THICKNESS: 3px;
+$TEXT_OPACITY: .8;
+$TRANSITION_DURATION: .1s ease-in-out;
+$TRANSITION_DURATION_MOBILE: .25s ease-in-out;
+$COLOR_TRSP: rgba(255, 255, 255, .8);
+
 
 html {
     background: $BACKGROUND;

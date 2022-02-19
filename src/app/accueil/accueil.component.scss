@@ -1,18 +1,18 @@
-$COLOR: white;
-$PADDING: 0 20vw 0 20vw;
-$PADDING_MOBILE: 0 10vw 0 10vw;
-$TEXT_OPACITY: .8;
-$TRANSITION_DURATION: .1s ease-in-out;
-$TEXT_GRADIENT: linear-gradient(45deg, #1f80ff 30%, #99c2ff, #1f80ff 70%);
-$BORDER_GRADIENT: linear-gradient(45deg, #1f80ff 30%, #99c2ff, #1f80ff 70%);
-$THICKNESS: 3px;
-$HEADER_GREY: transparentize($color: #1f2122, $amount: .15);
-
+// $COLOR: white;
+// $PADDING: 0 20vw 0 20vw;
+// $PADDING_MOBILE: 0 10vw 0 10vw;
+// $TEXT_OPACITY: .8;
+// $TRANSITION_DURATION: .1s ease-in-out;
+// $TEXT_GRADIENT: linear-gradient(45deg, #1f80ff 30%, #99c2ff, #1f80ff 70%);
+// $BORDER_GRADIENT: linear-gradient(45deg, #1f80ff 30%, #99c2ff, #1f80ff 70%);
+// $THICKNESS: 3px;
+// $HEADER_GREY: transparentize($color: #1f2122, $amount: .15);
+@use '../../styles.scss' as c;
 
 @media screen and (min-width: 768px) {
     article {
         max-width: 100%;
-        padding: $PADDING;
+        padding: c.$PADDING;
         // padding-top: 4em;
 
         position: relative;
@@ -24,7 +24,7 @@ $HEADER_GREY: transparentize($color: #1f2122, $amount: .15);
             padding: 10vh 0 0 0;
             min-height: calc(100vh);
 
-            transition: $TRANSITION_DURATION all;
+            transition: c.$TRANSITION_DURATION all;
 
 
             &:first-of-type {
@@ -65,7 +65,6 @@ $HEADER_GREY: transparentize($color: #1f2122, $amount: .15);
 
                     background: linear-gradient(0deg, black, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.12), transparent);
 
-                    // border: 2px solid white;
                 }
 
                 h2 {
@@ -99,7 +98,7 @@ $HEADER_GREY: transparentize($color: #1f2122, $amount: .15);
                 justify-content: space-between;
                 align-items: center;
 
-                transition: $TRANSITION_DURATION all;
+                transition: c.$TRANSITION_DURATION all;
 
                 animation: onLoad .5s ease-in-out;
 
@@ -143,7 +142,7 @@ $HEADER_GREY: transparentize($color: #1f2122, $amount: .15);
                             left: -2px;
                             width: 100%;
                             height: 100%;
-                            background: $BORDER_GRADIENT;
+                            background: c.$TEXT_GRADIENT;
                             padding: 2px;
                             border-radius: inherit;
                 
@@ -153,7 +152,7 @@ $HEADER_GREY: transparentize($color: #1f2122, $amount: .15);
                         span {
                             background-clip: text;
                             color: transparent;
-                            background-image: $TEXT_GRADIENT;
+                            background-image: c.$TEXT_GRADIENT;
                         }
                     }
                 }
@@ -195,13 +194,13 @@ $HEADER_GREY: transparentize($color: #1f2122, $amount: .15);
 
                             color: transparent;
                             background-clip: text;
-                            background-image: $TEXT_GRADIENT;
+                            background-image: c.$TEXT_GRADIENT;
                             margin: 0;
                             padding: 0;
                         }
 
                         p {
-                            color: white; //rgba(255, 255, 255, $TEXT_OPACITY);
+                            color: white; //rgba(255, 255, 255, c.$TEXT_OPACITY);
                             background: black;
                             
                             font-size: 1.475em;
@@ -221,7 +220,7 @@ $HEADER_GREY: transparentize($color: #1f2122, $amount: .15);
         opacity: 0;
     }
     to {
-        opacity: $TEXT_OPACITY;
+        opacity: c.$TEXT_OPACITY;
     }
 }
 
@@ -258,7 +257,7 @@ $HEADER_GREY: transparentize($color: #1f2122, $amount: .15);
     
                 transition: background-color .25s ease-in-out;
     
-                background-color: $HEADER_GREY;
+                background-color: c.$HEADER_GREY;
                 z-index: 1;
                 
                 #burger {
@@ -272,10 +271,10 @@ $HEADER_GREY: transparentize($color: #1f2122, $amount: .15);
     
     
                     span {
-                        height: $THICKNESS;
-                        margin: $THICKNESS 0;
-                        border-radius: calc($THICKNESS/2);
-                        background: $COLOR;
+                        height: c.$THICKNESS;
+                        margin: c.$THICKNESS 0;
+                        border-radius: calc(c.$THICKNESS/2);
+                        background: c.$COLOR;
                         transition: .2s ease-in-out;
     
                         
@@ -299,7 +298,7 @@ $HEADER_GREY: transparentize($color: #1f2122, $amount: .15);
                             & ~ span {
                                 &:nth-of-type(1) {
                                     transform-origin: bottom;
-                                    transform: rotateZ(45deg) translate($THICKNESS, 1.5px);
+                                    transform: rotateZ(45deg) translate(c.$THICKNESS, 1.5px);
                                 }
                 
                                 &:nth-of-type(2) {
@@ -384,7 +383,7 @@ $HEADER_GREY: transparentize($color: #1f2122, $amount: .15);
     
                     // font-size: 1.2em;
             
-                    border-bottom: 1px solid rgba(255, 255, 255, $TEXT_OPACITY);
+                    border-bottom: 1px solid rgba(255, 255, 255, c.$TEXT_OPACITY);
                 }
             
                 .copyrights {
@@ -399,7 +398,7 @@ $HEADER_GREY: transparentize($color: #1f2122, $amount: .15);
                     overflow-x: hidden;
     
                     font-size: .75em;
-                    color: rgba(255, 255, 255, $TEXT_OPACITY);
+                    color: rgba(255, 255, 255, c.$TEXT_OPACITY);
                 
                     z-index: 0;
                 }
@@ -413,7 +412,7 @@ $HEADER_GREY: transparentize($color: #1f2122, $amount: .15);
     
             width: 100%;
             margin: 5em 0 0 0;
-            padding: $PADDING_MOBILE;
+            padding: c.$PADDING_MOBILE;
     
             p {
                 display: flex;
@@ -440,7 +439,7 @@ $HEADER_GREY: transparentize($color: #1f2122, $amount: .15);
                         left: -2px;
                         width: 100%;
                         height: 100%;
-                        background: $BORDER_GRADIENT;
+                        background: c.$TEXT_GRADIENT;
                         padding: 2px;
                         border-radius: inherit;
             
@@ -450,7 +449,7 @@ $HEADER_GREY: transparentize($color: #1f2122, $amount: .15);
                     span {
                         background-clip: text;
                         color: transparent;
-                        background-image: $TEXT_GRADIENT;
+                        background-image: c.$TEXT_GRADIENT;
                     }
                 }
             }
@@ -548,13 +547,13 @@ $HEADER_GREY: transparentize($color: #1f2122, $amount: .15);
     
                             color: transparent;
                             background-clip: text;
-                            background-image: $TEXT_GRADIENT;
+                            background-image: c.$TEXT_GRADIENT;
                             margin: 0;
                             padding: 0;
                         }
     
                         p {
-                            color: white; //rgba(255, 255, 255, $TEXT_OPACITY);
+                            color: white; //rgba(255, 255, 255, c.$TEXT_OPACITY);
                             background: black;
                             
                             padding: 0 0 0 .15em;
